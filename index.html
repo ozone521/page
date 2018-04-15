@@ -1,41 +1,109 @@
-<%@page contentType="love1/html;charset=gb2312"%>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>我爱你</title>
-<style type="text/css">
-a,span,em {
-    background: lightpink;
-    font-family:"幼圆";
-    font-size:20px;
-    line-height:2.5em;
-}
-</style>
-    <h2>心里都是你</h2>
-<div style=" position:; top:5px; right:5px; width:305px; height:28px; line-height：8px; background:#030; color:#fff; font-size:18px; text-align:center; border-radius:30px; opacity:0.1">我爱你你知道么？</div>
-          <span id="headTxt2" style=""  >想抱抱</span>
-          <div id="bodytxt" style="position: relative;"><img style="float: left;" width="340" height="453" src="https://img-blog.csdn.net/20180415015058820?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L296b25lNTIw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"><span style="font-size:18px;font-weight:bold;color:red;font-family:sans-serif;" id="theTime"></span>
-            <b>&nbsp;&nbsp;皮皮鸡:</b></br>
-            <b>&nbsp;&nbsp;^_^  hello world～ 在忙吗？</b><br></br>
-              <b>&nbsp;&nbsp;(￣__￣)  啊，我有点想你！</b><br></br>
-              <b>&nbsp;&nbsp;0.0 啊，在DEBUG吗？那不打扰你啦～～</b><br></br>
-              <b>&nbsp;&nbsp;(⊙ω⊙)b 又要project，好辛苦…</b><br></br>
-              <b>&nbsp;&nbsp;\(//△//)\能看到你就好开心</b><br></br>
-              <b>&nbsp;&nbsp;:D 有心形代码嘛？送给我的那种</b><br></br>
-              <b>&nbsp;&nbsp;T-T 愿不愿意用键盘养我？</b><br></br>
-              <b>&nbsp;&nbsp;( ' △ ' )?我有吃的，你愿意当我的小白鼠吗？</b><br></br>
-              <b>&nbsp;&nbsp;*\(^o^)/*解决了BUG，那么我们去庆祝一下吧！</b><br></br>
-              <b>&nbsp;&nbsp;(>?<)?我喜欢你。</b><br></br>
-</b>
-            </div>
-        </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- JavaScript 鎻掍欢 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <style>
+        body{
+            background-color: #FFFFFF;
+            font-family: "microsoft yahei";
+            /*min-width: 800px;*/
+        }
+        img{
+            width: 100%;
+            /*height: 462px;*/
+        }
+        .navbar{
+            /*margin-bottom: -10px;*/
+        }
+        #myppt{
+            margin-top: -20px;
+
+        }
+    </style>
 
 </head>
 <body>
+    <ul class="nav navbar-nav navbar-bottem">
+        <li><a data-toggle="modal" data-target="#register" href=""><span class="glyphicon glyphicon-user"></span> 娉ㄥ唽</a></li>
+        <li><a data-toggle="modal" data-target="#login" href=""><span class="glyphicon glyphicon-log-in"></span> 鐧诲綍</a></li>
+    </ul>
+    <!-- 娉ㄥ唽绐楀彛 -->
+    <div id="register" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">娉ㄥ唽</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="">
+                            <div class="form-group">
+                                <label for="">鐢ㄦ埛鍚�</label>
+                                <input class="form-control" type="text" placeholder="6-15浣嶅瓧姣嶆垨鏁板瓧">
+                            </div>
+                            <div class="form-group">
+                                <label for="">瀵嗙爜</label>
+                                <input class="form-control" type="password" placeholder="鑷冲皯6浣嶅瓧姣嶆垨鏁板瓧">
+                            </div>
+                            <div class="form-group">
+                                <label for="">鍐嶆杈撳叆瀵嗙爜</label>
+                                <input class="form-control" type="password" placeholder="鑷冲皯6浣嶅瓧姣嶆垨鏁板瓧">
+                            </div>
+                            <div class="text-right">
+                                <button class="btn btn-primary" type="submit">鎻愪氦</button>
+                                <button class="btn btn-danger" data-dismiss="modal">鍙栨秷</button>
+                            </div>
+                            <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">宸叉湁璐﹀彿锛熺偣鎴戠櫥褰�</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 鐧诲綍绐楀彛 -->
+    <div id="login" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">鐧诲綍</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="">
+                            <div class="form-group">
+                                <label for="">鐢ㄦ埛鍚�</label>
+                                <input class="form-control" type="text" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">瀵嗙爜</label>
+                                <input class="form-control" type="password" placeholder="">
+                            </div>
+                            <div class="text-right">
+                                <button class="btn btn-primary" type="submit">鐧诲綍</button>
+                                <button class="btn btn-danger" data-dismiss="modal">鍙栨秷</button>
+                            </div>
+                            <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">杩樻病鏈夎处鍙凤紵鐐规垜娉ㄥ唽</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
